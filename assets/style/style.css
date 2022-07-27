@@ -359,4 +359,26 @@ template {
   color: #F69E7B;
   background-color: #383E56;
   box-shadow: 0px 5px 15px rgba(56, 62, 86, 0.25);
+}
+
+.main__header {
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main__header .main__title {
+  font-size: 32px;
+  font-weight: 600;
+  font-family: "Merriweather", serif;
+}
+.main__header .main__description {
+  width: 60%;
+  text-align: center;
+}
+.main__header .main__description span {
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */

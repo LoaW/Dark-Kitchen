@@ -1,20 +1,76 @@
 // Data
 const repas_data = [
     {
-        img : "assets/img/simpleSushi.jpeg",
-        name : "The Fresh Sushis",
-        description : "Un vent de fraîcheur souffle sur le fresh maki ! Un mélange sucré/salé où la finesse de de la daurade rencontre le pétillant de l’ananas.",
-        price : 6.15,
-        addInCart : "assets/img/china.jpeg"
+      img: "assets/img/cone.png",
+      name: "Salmon Cone",
+      description: "Blablabla",
+      price: 6.15,
+      addInCart: "assets/img/cone.png",
     },
     {
-        img : "assets/img/simpleSushi.jpeg",
-        name : "The Fresh SalmonRolls",
-        description : "Un vent de fraîcheur souffle sur le fresh maki ! Un mélange sucré/salé où la finesse de de la daurade rencontre le pétillant de l’ananas.",
-        price : 6.15,
-        addInCart : "assets/img/china.jpeg"
-    }
-]
+      img: "assets/img/eggmaki.png",
+      name: "Egg Maki",
+      description: "Blablabla",
+      price: 6.15,
+      addInCart: "assets/img/cone.png",
+    },
+    {
+      img: "assets/img/meatballs.png",
+      name: "Meatballs",
+      description: "Blablabl",
+      price: 6.15,
+      addInCart: "assets/img/meatballs.png",
+    },
+    {
+      img: "assets/img/noodle.png",
+      name: "Noodle",
+      description: "Blablabla",
+      price: 6.15,
+      addInCart: "assets/img/noodle.png",
+    },
+    {
+      img: "assets/img/salmonmaki.png",
+      name: "Salmon Maki",
+      description: "Blablabla",
+      price: 6.15,
+      addInCart: "assets/img/salmonmaki.png",
+    },
+    {
+      img: "assets/img/salmonsushi.png",
+      name: "Salmon Sushi",
+      description: "blablabla",
+      price: 6.15,
+      addInCart: "assets/img/salmonsushi.png",
+    },
+    {
+      img: "assets/img/shrimps.png",
+      name: "Shrimps",
+      description: "blablabla",
+      price: 6.15,
+      addInCart: "assets/img/shrimps.png",
+    },
+    {
+      img: "assets/img/soup.png",
+      name: "Soup",
+      description: "blablabla",
+      price: 6.15,
+      addInCart: "assets/img/soup.png",
+    },
+    {
+      img: "assets/img/sushi.png",
+      name: "Sushi",
+      description: "blablabla",
+      price: 6.15,
+      addInCart: "assets/img/sushi.png",
+    },
+    {
+      img: "assets/img/vegemaki.png",
+      name: "Vegemaki",
+      description: "blablabla",
+      price: 6.15,
+      addInCart: "assets/img/vegemaki.png",
+    },
+  ];
 
 const generateCard = (repas) => {
     let card = document.createElement("section") // card

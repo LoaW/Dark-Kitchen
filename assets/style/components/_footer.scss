@@ -1,0 +1,38 @@
+.footer {
+    width: 100%;
+    height: 300px;
+    background-color: $colormain;
+    position: relative;
+    bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
+
+    &__informations {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 350px;
+        height: fit-content;
+        border: 2px solid white;
+    };
+
+    &__logo {
+        width: 200px;
+        border: 2px solid yellow;
+
+    };
+    &__title {
+        font-family: $font-title;
+        color: $colorlight;
+        font-size: 30px;
+        border: 2px solid red;
+        margin: 0 0 0 0;
+    }
+    
+
+}

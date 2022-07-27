@@ -1,41 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="assets/script/script.js"></script>
-    <link rel="stylesheet" href="assets/Style/style.css">
-    <title>Dark-Kitchen</title>
-</head>
-<body>
-    <header>
-        <nav class="nav">
-            <div class="container">
-                <div class="switch main_list" id="mainListDiv">
-                    <a href="#news">News</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#about">About</a>            
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                    </label>
-                </div>
-                <div class="media_button">
-                    <button class="main_media_button" id="mediaButton">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-            </div>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Xavier Brigode, Selim Elyahyioui, Doriano Vanvolcksom, Eddy Vervoort" />
+    <meta name="description" content="Ghost Kitchen template project" />
+    <meta
+      name="keywords"
+      content="html, css, figma, sass, scss,front-end, webdesign, flex-box, javascript, responsive"
+    />
+    <meta name="generator" content="Visual Studio Code" />
+    <!----------------------------------Stylesheets--------------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"type="text/css"media="screen"href="assets/style/style.css"/>
+
+    <title>Sans Sushi</title>
+    <script defer src="/assets/js/generateCard.js"></script>
+  </head>
+
+  <body>
+    <!----------------------------------- Header ----------------------------------->
+
+
+    <nav class="nav">
+        <img class="nav__logo" src="./assets/img/Black and White Restaurant Sushi and Bar Logo.svg" alt="Sans sushi"/>
+        
+        <ul class="nav__menu">
+            <li class="nav__item"><a href="index.html">Home</a></li>
+            <li class="nav__item"><a href="index.html">Food</a></li>
+            <li class="nav__item"><a href="index.html">Services</a></li>
+            <li class="nav__item"><a href="index.html">About Us</a></li>
+        </ul>
+
+        <button class="nav__button" type="button">Order</button>
+
+    </nav>
+
+
+    <header class="header">
+
+        <section class="header__content">
+            <h1 class="header__title">Sushi Meal</h1>
+            <p class="header__description">Description</p>
+            <button class="header__button" type="button">View Menu</button>
+
+        </section>
+
+
+        
+
     </header>
-    <main>
-        <p> test for dark mode </p>
+
+  
+
+    <main class="main">
+   
+        <section class="main__header">
+            <h2 class ="main__title">What will you order today?</h2>
+            <p class="main__description">description</p>
+
+        </section>
+
+        <section class="main__selection">
+
+        </section>
+
+        <section class="main__collection">
+
+
+        </section>
+
+
+
+
     </main>
-    <footer>
+
+    <footer class="footer">
+        <section class="footer__description">
+            <img class="footer__logo" src="./assets/img/Black and White Restaurant Sushi and Bar Logo.svg" alt="Sans sushi"/>
+            <p class="footer__text">footer description</p>
+        </section>
+        <section class="footer__list">
+            <ul class="footer__members">
+                <li>Doriano Vanvolcksom</li>
+                <li>Eddy Vervoort</li>
+                <li>Sélim Elyahyioui</li>
+                <li>Xavier Brigode</li>
+            </ul>
+        </section>
 
     </footer>
-</body>
+  </body>
 </html>

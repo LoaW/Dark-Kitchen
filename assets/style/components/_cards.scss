@@ -1,0 +1,17 @@
+.card{
+    background-color: $colorlight;
+    img{
+        background-color: white;
+    }
+    width : 200px;
+    height : 350px;
+    border : solid;
+    display : flex;
+    flex-direction : column;
+    margin : 15px; 
+    border-radius: 15px;
+    overflow : hidden;
+    box-Shadow : 5px 5px 5px #4d4d4d;
+}
+
+

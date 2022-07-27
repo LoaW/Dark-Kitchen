@@ -310,4 +310,20 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+.card {
+  background-color: #EEDAD1;
+  width: 200px;
+  height: 350px;
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-Shadow: 5px 5px 5px #4d4d4d;
+}
+.card img {
+  background-color: white;
 }/*# sourceMappingURL=style.css.map */

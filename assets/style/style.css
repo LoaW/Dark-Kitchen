@@ -356,7 +356,7 @@ template {
   box-shadow: 0px 5px 15px rgba(246, 158, 123, 0.25);
 }
 .nav__menu .nav__button:hover {
-  color: #F69E7B;
+  color: #fff;
   background-color: #383E56;
   box-shadow: 0px 5px 15px rgba(56, 62, 86, 0.25);
 }
@@ -451,4 +451,26 @@ template {
     display: block;
     grid-area: 1/1/4/2;
   }
+}
+.main__selection {
+  width: 80%;
+  margin: 0 auto 100px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.main__selection .selection__button:nth-child(-n+4) {
+  margin-right: 40px;
+}
+.main__selection .selection__button {
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  border-style: none;
+  background-color: rgb(248, 248, 248);
+}
+.main__selection .selection__button:hover {
+  background-color: #383E56;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

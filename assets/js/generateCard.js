@@ -83,57 +83,55 @@ const repas_data = [
 ];
 
 const generateCard = (repas) => {
-  let card = document.createElement("section")
-  card.setAttribute("class", "card") // card
+  let card = document.createElement("section");
+  card.setAttribute("class", "card"); // card
 
   // IMAGE CONTAINER
-  let areaImg = document.createElement("article")
-  areaImg.setAttribute("class", "areaImg")
+  let areaImg = document.createElement("article");
+  areaImg.setAttribute("class", "areaImg");
   // IMAGE
-  const img = document.createElement("img")
-  img.setAttribute("src", repas.img)
-  img.setAttribute("alt", "image du pays")
+  const img = document.createElement("img");
+  img.setAttribute("src", repas.img);
+  img.setAttribute("alt", "image du pays");
   // TITLE + DESCRIPTION
-  const infos = document.createElement("div")
-  infos.setAttribute("class", "infos")
+  const infos = document.createElement("div");
+  infos.setAttribute("class", "infos");
   //  TITLE
-  const titre = document.createElement("h2")
-  titre.setAttribute("class", "titre")
-  titre.innerHTML = repas.name
+  const titre = document.createElement("h2");
+  titre.setAttribute("class", "titre");
+  titre.innerHTML = repas.name;
   //  DESCRIPTION
-  const description = document.createElement("p")
-  description.setAttribute("class", "description")
-  description.innerHTML = repas.description
+  const description = document.createElement("p");
+  description.setAttribute("class", "description");
+  description.innerHTML = repas.description;
   // CARD FOOTER
-  const cardFooter = document.createElement("div")
-  cardFooter.setAttribute("class", "cardFooter")
+  const cardFooter = document.createElement("div");
+  cardFooter.setAttribute("class", "cardFooter");
   // PRICE
-  const price = document.createElement("p")
-  price.setAttribute("class", "price")
-  price.innerHTML = repas.price
+  const price = document.createElement("p");
+  price.setAttribute("class", "price");
+  price.innerHTML = repas.price;
   // ADD CART BUTTON
-  const addButton = document.createElement("img")
-  addButton.setAttribute("class", "addButton")
-  addButton.setAttribute("src", "./assets/img/add.png")
-  
-  card.appendChild(areaImg)
-  areaImg.appendChild(img)
-  card.appendChild(infos)
-  infos.appendChild(titre)
-  infos.appendChild(description)
-  card.appendChild(cardFooter)
-  cardFooter.appendChild(price)
-  cardFooter.appendChild(addButton)
+  const addButton = document.createElement("img");
+  addButton.setAttribute("class", "addButton");
+  addButton.setAttribute("src", "./assets/img/add.png");
+
+  card.appendChild(areaImg);
+  areaImg.appendChild(img);
+  card.appendChild(infos);
+  infos.appendChild(titre);
+  infos.appendChild(description);
+  card.appendChild(cardFooter);
+  cardFooter.appendChild(price);
+  cardFooter.appendChild(addButton);
 
   return card;
-}
+};
 
 // all Card
 const createAllCards = (collection) => {
-    const container = document.querySelector(".main__collection")
-    container.classList.add("container")
-     
- 
+  const container = document.querySelector(".main__collection");
+  container.classList.add("container");
 
   for (const repas of collection) {
     const generatedCard = generateCard(repas);
@@ -208,3 +206,24 @@ const Plates = repas_data.filter(function (Plate) {
 const Others = repas_data.filter(function (other) {
   return other.sort === "Other";
 });
+
+// Burger menu
+
+const navMenu = document.querySelector(".nav__menu");
+const sushiMenu = document.querySelector(".sushi__menu");
+const closeMenu = document.querySelector(".close__menu");
+
+sushiMenu.onclick = openNav;
+closeMenu.onclick = closeNav;
+
+function openNav() {
+  navMenu.classList.remove("hideBut");
+  navMenu.classList.add("openBut");
+  sushiMenu.style.display = "none";
+}
+
+function closeNav() {
+  navMenu.classList.add("hideBut");
+  navMenu.classList.remove("openBut");
+  sushiMenu.style.display = "block";
+}

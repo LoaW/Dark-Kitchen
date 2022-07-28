@@ -332,9 +332,10 @@ template {
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-right: 40px;
 }
-.nav__menu .nav__list .nav__item:nth-child(-n+3) {
+.nav__menu .nav__list .nav__item:nth-child(-n+5) {
   margin-right: 40px;
 }
 .nav__menu .nav__list a {
@@ -345,7 +346,7 @@ template {
   color: #F69E7B;
   text-shadow: 0px 5px 15px rgba(246, 158, 123, 0.25);
 }
-.nav__menu .nav__button {
+.nav__menu .nav__list .nav__button {
   width: 100px;
   height: 50px;
   border: none;
@@ -355,12 +356,70 @@ template {
   background-color: #F69E7B;
   box-shadow: 0px 5px 15px rgba(246, 158, 123, 0.25);
 }
-.nav__menu .nav__button:hover {
+.nav__menu .nav__list .nav__button:hover {
   color: #fff;
   background-color: #383E56;
   box-shadow: 0px 5px 15px rgba(56, 62, 86, 0.25);
 }
+.nav__menu .nav__list .close__menu {
+  display: none;
+}
+.nav .sushi__menu {
+  display: none;
+  width: 60px;
+}
+@media screen and (max-width: 480px) {
+  .nav .sushi__menu {
+    display: block;
+  }
+}
 
+@media screen and (max-width: 480px) {
+  .openBut {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 200px;
+    height: 250px;
+    background-color: rgba(240, 240, 240, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+  .openBut .nav__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .openBut .nav__list .nav__item {
+    margin-bottom: 15px;
+  }
+  .openBut .nav__list .close__menu {
+    display: block;
+    width: 15px;
+  }
+  .hideBut {
+    position: absolute;
+    top: -100%;
+    right: 0px;
+    width: 200px;
+    height: 300px;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+  .hideBut .nav__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .hideBut .nav__list .nav__item {
+    margin-bottom: 15px;
+  }
+}
 .main__header {
   width: 80%;
   height: 300px;

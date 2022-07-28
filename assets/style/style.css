@@ -493,6 +493,8 @@ template {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 80%;
+  margin: auto;
 }
 
 .areaImg {
@@ -538,7 +540,7 @@ template {
 }
 
 .footer {
-  width: 80%;
+  width: 100%;
   margin: 2rem auto 0 auto;
   position: relative;
   height: -webkit-min-content;

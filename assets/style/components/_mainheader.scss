@@ -1,0 +1,21 @@
+.main__header {
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .main__title {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: "Merriweather", serif;
+  }
+  .main__description {
+    width: 60%;
+    text-align: center;
+    span {
+      font-weight: 600;
+    }
+  }
+}

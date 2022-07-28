@@ -1,0 +1,64 @@
+.header{
+    &__content{  
+        width: 80%;
+        height: 500px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 33.1% 33.2% 33.2%;
+        justify-items: center;
+        align-items: center;
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        &Cone{ grid-area: 1/2/4/3;}
+        &Meal{grid-area: 2/2/4/3;}
+        &Mob{display: none;}
+    }
+    &__description{
+    color: $colormain;
+    grid-area: 2/1/3/2;
+    }
+    &__button{
+        display: grid;
+        text-decoration: none;
+        align-items:center;
+        justify-items: center;
+        width: 100px;
+        height: 30px;
+        border: none;
+        border-radius: 50px;
+        font-weight: 300;
+        background-color: $colorlinks;
+        color: white;
+        grid-area: 3/1/4/2;
+        &:hover{
+            background-color: $colorlinks;
+            color:$colormain;
+        }
+    }
+    &__title{
+        color: $colormain;
+        grid-area: 1/1/2/2;
+    }
+}
+@media only screen and (max-width:600px) {
+    .header{
+        &__content{
+            grid-template-columns: 100%;
+            grid-template-rows: 10% 80% 10%;
+        }
+        &__description{
+            color: black;
+        }
+       
+        &__img{
+            &Cone{display: none;}
+            &Meal{display: none;}
+            &Mob{
+                display: block;
+                grid-area: 1/1/4/2;}
+        }
+    
+}}

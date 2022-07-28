@@ -83,61 +83,62 @@ const repas_data = [
 ];
 
 const generateCard = (repas) => {
-  let card = document.createElement("section"); // card
-  card = styleCard(card);
+  let card = document.createElement("section")
+  card.setAttribute("class", "card") // card
 
-  let areaImg = document.createElement("article");
-  areaImg.style.width = "180px";
-  areaImg.style.height = "150px";
-  areaImg.style.overflow = "hidden";
-  areaImg.style.margin = "10px";
-  areaImg.style.borderRadius = "15px";
-
-  const img = document.createElement("img");
-  img.setAttribute("src", repas.img);
-  img.setAttribute("alt", "image du pays");
-
-  const infos = document.createElement("div");
-  infos.style.display = "flex";
-  infos.style.flexDirection = "column";
-
-  const titre = document.createElement("h2");
-  titre.innerHTML = repas.name;
-  titre.style.textAlign = "center";
-
-  card.appendChild(areaImg);
-  areaImg.appendChild(img);
-  card.appendChild(infos);
-  infos.appendChild(titre);
+  // IMAGE CONTAINER
+  let areaImg = document.createElement("article")
+  areaImg.setAttribute("class", "areaImg")
+  // IMAGE
+  const img = document.createElement("img")
+  img.setAttribute("src", repas.img)
+  img.setAttribute("alt", "image du pays")
+  // TITLE + DESCRIPTION
+  const infos = document.createElement("div")
+  infos.setAttribute("class", "infos")
+  //  TITLE
+  const titre = document.createElement("h2")
+  titre.setAttribute("class", "titre")
+  titre.innerHTML = repas.name
+  //  DESCRIPTION
+  const description = document.createElement("p")
+  description.setAttribute("class", "description")
+  description.innerHTML = repas.description
+  // CARD FOOTER
+  const cardFooter = document.createElement("div")
+  cardFooter.setAttribute("class", "cardFooter")
+  // PRICE
+  const price = document.createElement("p")
+  price.setAttribute("class", "price")
+  price.innerHTML = repas.price
+  // ADD CART BUTTON
+  const addButton = document.createElement("img")
+  addButton.setAttribute("class", "addButton")
+  addButton.setAttribute("src", "./assets/img/add.png")
+  
+  card.appendChild(areaImg)
+  areaImg.appendChild(img)
+  card.appendChild(infos)
+  infos.appendChild(titre)
+  infos.appendChild(description)
+  card.appendChild(cardFooter)
+  cardFooter.appendChild(price)
+  cardFooter.appendChild(addButton)
 
   return card;
-};
+}
 
 // all Card
 const createAllCards = (collection) => {
-  const container = document.querySelector(".main__collection");
-  container.style.display = "flex";
-  container.style.flexWrap = "wrap";
-  container.style.justifyContent = "center";
+    const container = document.querySelector(".main__collection")
+    container.classList.add("container")
+     
+ 
 
   for (const repas of collection) {
     const generatedCard = generateCard(repas);
     container.appendChild(generatedCard);
   }
-};
-
-const styleCard = (card) => {
-  card.style.width = "200px";
-  card.style.height = "350px";
-  card.style.border = "solid";
-  card.style.display = "flex";
-  card.style.flexDirection = "column";
-  card.style.margin = "15px";
-  card.style.borderRadius = "15px";
-  card.style.overflow = "hidden";
-  card.style.boxShadow = "5px 5px 5px #4d4d4d";
-
-  return card;
 };
 
 window.onload = createAllCards(repas_data);

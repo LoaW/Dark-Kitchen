@@ -154,7 +154,7 @@ butMaki.addEventListener("click", () => {
   while (papa.firstChild) {
     papa.removeChild(papa.lastChild);
   }
-  createAllCards(Makis);
+  ;
 });
 
 const butSushi = document.querySelector(".sushi");

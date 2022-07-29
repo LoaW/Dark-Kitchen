@@ -1,64 +1,71 @@
-.header{
- 
-    &__content{
-        width: 80%;
-        height: auto;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 60% 40%;
-        grid-template-rows: 33.1% 33.2% 33.2%;
-        justify-items: center;
-        align-items: center;
+.header {
+  &__content {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 33.1% 33.2% 33.2%;
+    justify-items: center;
+    align-items: center;
+  }
+  &__img {
+    width: auto;
+    height: auto;
+    justify-self: flex-end;
+    &Cone {
+      width: 100%;
+      height: auto;
+      grid-area: 1/2/4/3;
     }
-    &__img{
-        width: auto;
-        height: auto;
-        justify-self: flex-end;
-        &Cone{
-            width: 100%;
-            height: auto; 
-            grid-area: 1/2/4/3;}
-        &Meal{
-            width: 100%;
-            height: auto;
-            grid-area: 2/2/4/3;}
-        }
-    &__description{
+    &Meal {
+      width: 100%;
+      height: auto;
+      grid-area: 2/2/4/3;
+    }
+  }
+  &__description {
     color: $colormain;
     grid-area: 2/1/3/2;
+  }
+  &__button {
+    display: grid;
+    text-decoration: none;
+    align-items: center;
+    justify-items: center;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    background-color: $colorlinks;
+    color: white;
+    box-shadow: 0px 5px 15px rgba(246, 158, 123, 0.25);
+    grid-area: 3/1/4/2;
+    &:hover {
+      background-color: $colormain;
+      color: white;
+      box-shadow: 0px 5px 15px rgba(56, 62, 86, 0.25);
     }
-    &__button{
-        display: grid;
-        text-decoration: none;
-        align-items:center;
-        justify-items: center;
-        width: 100px;
-        height: 30px;
-        border: none;
-        border-radius: 50px;
-        font-weight: 300;
-        background-color: $colorlinks;
-        color: white;
-        grid-area: 3/1/4/2;
-        &:hover{
-            background-color: $colorlinks;
-            color:$colormain;
-        }
-    }
-    &__title{
-        color: $colormain;
-        grid-area: 1/1/2/2;
-    }
+  }
+  &__title {
+    color: $colormain;
+    grid-area: 1/1/2/2;
+  }
 }
-@media only screen and (max-width:480px) {
-    .header{
-        &__content{
-            grid-template-columns: 100%;
-            grid-template-rows: 10% 80% 10%;
-        }
-        &__img{
-            &Cone{display: none;}
-            &Meal{display: none;}
-        }
+@media only screen and (max-width: 480px) {
+  .header {
+    &__content {
+      grid-template-columns: 100%;
+      grid-template-rows: 10% 80% 10%;
     }
+    &__img {
+      &Cone {
+        display: none;
+      }
+      &Meal {
+        display: none;
+      }
+    }
+  }
 }

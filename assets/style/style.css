@@ -332,9 +332,10 @@ template {
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-right: 40px;
 }
-.nav__menu .nav__list .nav__item:nth-child(-n+3) {
+.nav__menu .nav__list .nav__item:nth-child(-n+5) {
   margin-right: 40px;
 }
 .nav__menu .nav__list a {
@@ -345,7 +346,7 @@ template {
   color: #F69E7B;
   text-shadow: 0px 5px 15px rgba(246, 158, 123, 0.25);
 }
-.nav__menu .nav__button {
+.nav__menu .nav__list .nav__button {
   width: 100px;
   height: 50px;
   border: none;
@@ -355,15 +356,77 @@ template {
   background-color: #F69E7B;
   box-shadow: 0px 5px 15px rgba(246, 158, 123, 0.25);
 }
-.nav__menu .nav__button:hover {
+.nav__menu .nav__list .nav__button:hover {
   color: #fff;
   background-color: #383E56;
   box-shadow: 0px 5px 15px rgba(56, 62, 86, 0.25);
 }
+.nav__menu .nav__list .close__menu {
+  display: none;
+}
+.nav .sushi__menu {
+  display: none;
+  width: 60px;
+}
+@media screen and (max-width: 480px) {
+  .nav .sushi__menu {
+    display: block;
+  }
+}
 
+@media screen and (max-width: 480px) {
+  .openBut {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 240px;
+    height: 100vh;
+    background-color: rgba(240, 240, 240, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    transition: 0.3s;
+  }
+  .openBut .nav__list {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+  }
+  .openBut .nav__list .nav__item {
+    margin-bottom: 35px;
+  }
+  .openBut .nav__list .close__menu {
+    display: block;
+    width: 15px;
+  }
+  .hideBut {
+    position: absolute;
+    top: 0;
+    right: -240px;
+    width: 240px;
+    height: 100vh;
+    background-color: rgba(240, 240, 240, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    transition: 0.3s;
+  }
+  .hideBut .nav__list {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+  }
+  .hideBut .nav__list .nav__item {
+    margin-bottom: 35px;
+  }
+}
 .main__header {
   width: 80%;
-  height: 300px;
+  height: 250px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -374,6 +437,7 @@ template {
   font-size: 32px;
   font-weight: 600;
   font-family: "Merriweather", serif;
+  text-align: center;
 }
 .main__header .main__description {
   width: 60%;
@@ -381,6 +445,11 @@ template {
 }
 .main__header .main__description span {
   font-weight: 600;
+}
+@media screen and (max-width: 480px) {
+  .main__header .main__description {
+    width: 100%;
+  }
 }
 
 .header__content {
@@ -418,17 +487,19 @@ template {
   align-items: center;
   justify-items: center;
   width: 100px;
-  height: 30px;
+  height: 50px;
   border: none;
   border-radius: 50px;
-  font-weight: 300;
+  font-weight: 600;
   background-color: #F69E7B;
   color: white;
+  box-shadow: 0px 5px 15px rgba(246, 158, 123, 0.25);
   grid-area: 3/1/4/2;
 }
 .header__button:hover {
-  background-color: #F69E7B;
-  color: #383E56;
+  background-color: #383E56;
+  color: white;
+  box-shadow: 0px 5px 15px rgba(56, 62, 86, 0.25);
 }
 .header__title {
   color: #383E56;
@@ -449,7 +520,7 @@ template {
 }
 .main__selection {
   width: 80%;
-  margin: 0 auto 100px auto;
+  margin: 0 auto 60px auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -469,19 +540,28 @@ template {
   background-color: #383E56;
   color: #fff;
 }
+@media screen and (max-width: 480px) {
+  .main__selection {
+    flex-direction: column;
+    margin: 0 auto 30px auto;
+  }
+  .main__selection .selection__button:nth-child(-n+4) {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
 
 .card {
   background-color: rgb(255, 255, 255);
   width: 200px;
   height: 350px;
-  border: solid;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 15px;
   border-radius: 15px;
   overflow: hidden;
-  box-Shadow: 5px 5px 5px #b4b4b4;
+  box-shadow: 0px 5px 15px rgba(56, 62, 86, 0.25);
 }
 
 .container {
@@ -489,7 +569,7 @@ template {
   flex-wrap: wrap;
   justify-content: center;
   width: 80%;
-  margin: auto;
+  margin: 0 auto 60px auto;
 }
 
 .areaImg {

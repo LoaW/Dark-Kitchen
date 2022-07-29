@@ -82,7 +82,7 @@ const repas_data = [
   },
 ];
 
-const generateCard = (repas) => {
+const generateCard = (repas, i) => {
   let card = document.createElement("section");
   card.setAttribute("class", "card"); // card
 
@@ -120,6 +120,7 @@ const generateCard = (repas) => {
   cartButton.setAttribute("class", "cartButton");
   cartButton.setAttribute("type", "image");
   cartButton.setAttribute("src", "./assets/img/add.png");
+  cartButton.setAttribute("data-position", i)
 
   card.appendChild(areaImg);
   areaImg.appendChild(img);
@@ -138,9 +139,12 @@ const createAllCards = (collection) => {
   const container = document.querySelector(".main__collection");
   container.classList.add("container");
 
+  let i = 0
   for (const repas of collection) {
-    const generatedCard = generateCard(repas);
+    
+    const generatedCard = generateCard(repas, i);
     container.appendChild(generatedCard);
+    i++
   }
 };
 
@@ -231,4 +235,42 @@ function closeNav() {
   navMenu.classList.add("hideBut");
   navMenu.classList.remove("openBut");
   sushiMenu.style.display = "block";
+}
+
+
+// SHOPPING CART
+let shoppingCart_data = []
+const addToCart = document.querySelectorAll(".cartButton");
+
+for (let item of addToCart) {
+  let pos = item.getAttribute("data-position")
+  item.addEventListener("click", () => {
+    addItem(pos)
+  })
+}
+
+function addItem(pos) {
+  let quantity = 1;
+  let update = false
+  const name = repas_data[pos].name
+  const price = repas_data[pos].price
+  let position;
+
+  for (let i = 0; i < shoppingCart_data.length; i++) {
+    const element = shoppingCart_data[i];
+    if (element.name == name) {
+      quantity = element.quantity + 1
+      update = true
+      position = i
+      break
+    }
+  }
+  if (update) {
+    shoppingCart_data[position].quantity = quantity
+  }
+  else{
+    shoppingCart_data.push({name, price, quantity})
+  }
+
+  console.log(shoppingCart_data)
 }

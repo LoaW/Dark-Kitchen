@@ -487,17 +487,19 @@ template {
   align-items: center;
   justify-items: center;
   width: 100px;
-  height: 30px;
+  height: 50px;
   border: none;
   border-radius: 50px;
-  font-weight: 300;
+  font-weight: 600;
   background-color: #F69E7B;
   color: white;
+  box-shadow: 0px 5px 15px rgba(246, 158, 123, 0.25);
   grid-area: 3/1/4/2;
 }
 .header__button:hover {
-  background-color: #F69E7B;
-  color: #383E56;
+  background-color: #383E56;
+  color: white;
+  box-shadow: 0px 5px 15px rgba(56, 62, 86, 0.25);
 }
 .header__title {
   color: #383E56;
@@ -518,7 +520,7 @@ template {
 }
 .main__selection {
   width: 80%;
-  margin: 0 auto 100px auto;
+  margin: 0 auto 60px auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -553,14 +555,13 @@ template {
   background-color: rgb(255, 255, 255);
   width: 200px;
   height: 350px;
-  border: solid;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 15px;
   border-radius: 15px;
   overflow: hidden;
-  box-Shadow: 5px 5px 5px #b4b4b4;
+  box-shadow: 0px 5px 15px rgba(56, 62, 86, 0.25);
 }
 
 .container {
@@ -568,7 +569,7 @@ template {
   flex-wrap: wrap;
   justify-content: center;
   width: 80%;
-  margin: auto;
+  margin: 0 auto 60px auto;
 }
 
 .areaImg {

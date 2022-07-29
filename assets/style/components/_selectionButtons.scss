@@ -19,4 +19,12 @@
       color: #fff;
     }
   }
+  @include media-screen-mobile {
+    flex-direction: column;
+    margin: 0 auto 30px auto;
+    .selection__button:nth-child(-n + 4) {
+      margin-right: 0px;
+      margin-bottom: 20px;
+    }
+  }
 }

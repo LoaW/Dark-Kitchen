@@ -379,21 +379,23 @@ template {
     position: absolute;
     top: 0;
     right: 0px;
-    width: 200px;
-    height: 250px;
+    width: 240px;
+    height: 100vh;
     background-color: rgba(240, 240, 240, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
     transition: 0.3s;
   }
   .openBut .nav__list {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin-right: 0px;
   }
   .openBut .nav__list .nav__item {
-    margin-bottom: 15px;
+    margin-bottom: 35px;
   }
   .openBut .nav__list .close__menu {
     display: block;
@@ -401,28 +403,30 @@ template {
   }
   .hideBut {
     position: absolute;
-    top: -100%;
-    right: 0px;
-    width: 200px;
-    height: 300px;
-    background-color: rgb(240, 240, 240);
+    top: 0;
+    right: -240px;
+    width: 240px;
+    height: 100vh;
+    background-color: rgba(240, 240, 240, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
     transition: 0.3s;
   }
   .hideBut .nav__list {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin-right: 0px;
   }
   .hideBut .nav__list .nav__item {
-    margin-bottom: 15px;
+    margin-bottom: 35px;
   }
 }
 .main__header {
   width: 80%;
-  height: 300px;
+  height: 250px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -433,6 +437,7 @@ template {
   font-size: 32px;
   font-weight: 600;
   font-family: "Merriweather", serif;
+  text-align: center;
 }
 .main__header .main__description {
   width: 60%;
@@ -440,6 +445,11 @@ template {
 }
 .main__header .main__description span {
   font-weight: 600;
+}
+@media screen and (max-width: 480px) {
+  .main__header .main__description {
+    width: 100%;
+  }
 }
 
 .header__content {
@@ -532,6 +542,16 @@ template {
 .main__selection .selection__button:hover {
   background-color: #383E56;
   color: #fff;
+}
+@media screen and (max-width: 480px) {
+  .main__selection {
+    flex-direction: column;
+    margin: 0 auto 30px auto;
+  }
+  .main__selection .selection__button:nth-child(-n+4) {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
 }
 
 .card {

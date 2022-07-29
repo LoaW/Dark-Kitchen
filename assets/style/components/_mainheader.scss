@@ -1,6 +1,6 @@
 .main__header {
   width: 80%;
-  height: 300px;
+  height: 250px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -10,12 +10,16 @@
     font-size: 32px;
     font-weight: 600;
     font-family: "Merriweather", serif;
+    text-align: center;
   }
   .main__description {
     width: 60%;
     text-align: center;
     span {
       font-weight: 600;
+    }
+    @include media-screen-mobile {
+      width: 100%;
     }
   }
 }

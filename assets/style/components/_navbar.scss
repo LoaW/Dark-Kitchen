@@ -49,7 +49,6 @@
       }
     }
   }
-
   .sushi__menu {
     display: none;
     width: 60px;
@@ -58,25 +57,25 @@
     }
   }
 }
-
 @media screen and (max-width: ($width-mobile)) {
   .openBut {
     position: absolute;
     top: 0;
     right: 0px;
-    width: 200px;
-    height: 250px;
+    width: 240px;
+    height: 100vh;
     background-color: rgba(240, 240, 240, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(4px);
     transition: 0.3s;
     .nav__list {
       display: flex;
       flex-direction: column;
-      margin: 0;
+      margin-right: 0px;
       .nav__item {
-        margin-bottom: 15px;
+        margin-bottom: 35px;
       }
       .close__menu {
         display: block;
@@ -86,21 +85,22 @@
   }
   .hideBut {
     position: absolute;
-    top: -100%;
-    right: 0px;
-    width: 200px;
-    height: 300px;
-    background-color: rgb(240, 240, 240);
+    top: 0;
+    right: -240px;
+    width: 240px;
+    height: 100vh;
+    background-color: rgba(240, 240, 240, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(4px);
     transition: 0.3s;
     .nav__list {
       display: flex;
       flex-direction: column;
-      margin: 0;
+      margin-right: 0px;
       .nav__item {
-        margin-bottom: 15px;
+        margin-bottom: 35px;
       }
     }
   }

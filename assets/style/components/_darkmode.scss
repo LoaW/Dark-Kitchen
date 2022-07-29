@@ -61,7 +61,8 @@
     }
     .dark-theme {
         background-color: #15181f;
-        color: #e5e5e5;
+        //color: #e5e5e5;
+
     };
     .dark-theme .nav__mode__toggle{
         background-color: #f1f1f1;
@@ -75,8 +76,6 @@
         };
 
     };
-    
-
     
     .dark-theme .toggle:after{
         background-color: transparent;

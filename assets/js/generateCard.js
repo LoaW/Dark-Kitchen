@@ -210,5 +210,3 @@ const Others = repas_data.filter(function (other) {
 });
 
 //chop card
-
-

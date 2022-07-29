@@ -111,10 +111,15 @@ const generateCard = (repas) => {
   const price = document.createElement("p")
   price.setAttribute("class", "price")
   price.innerHTML = repas.price
+  // ADD  IMG CART BUTTON
+  // const imgButton = document.createElement("img")
+  // imgButton.setAttribute("class", "imgButton")
+  // imgButton.setAttribute("src", "./assets/img/add.png")
   // ADD CART BUTTON
-  const addButton = document.createElement("img")
-  addButton.setAttribute("class", "addButton")
-  addButton.setAttribute("src", "./assets/img/add.png")
+  const cartButton = document.createElement("input")
+  cartButton.setAttribute("class", "cartButton")
+  cartButton.setAttribute("type", "image")
+  cartButton.setAttribute("src", "./assets/img/add.png")
   
   card.appendChild(areaImg)
   areaImg.appendChild(img)
@@ -123,7 +128,7 @@ const generateCard = (repas) => {
   infos.appendChild(description)
   card.appendChild(cardFooter)
   cardFooter.appendChild(price)
-  cardFooter.appendChild(addButton)
+  cardFooter.appendChild(cartButton)
 
   return card;
 }

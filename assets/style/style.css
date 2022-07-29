@@ -534,9 +534,13 @@ template {
   align-items: center;
 }
 
-.addButton {
+.cartButton {
   width: 20px;
   height: 20px;
+}
+
+.cartButton:hover {
+  filter: saturate(3);
 }
 
 .footer {

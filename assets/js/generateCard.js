@@ -13,7 +13,7 @@
     document.documentElement.style.setProperty('--bg', '#333');
 
   }
-}*/
+}
 
 /*-------------------darkmode function--------------------*/
 document.querySelector(".nav__mode__toggle").addEventListener("click", function()

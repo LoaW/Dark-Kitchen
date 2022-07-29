@@ -1,19 +1,4 @@
 
-/*function darklightmode() {
-
-  if () {
-    document.documentElement.style.setProperty('--font', '#333');
-    document.documentElement.style.setProperty('--bg', '#f1f1f1');
-
-
-  };
-
-  else {
-    document.documentElement.style.setProperty('--font', '#f1f1f1');
-    document.documentElement.style.setProperty('--bg', '#333');
-
-  }
-}*/
 
 /*-------------------darkmode function--------------------*/
 document.querySelector(".nav__mode__toggle").addEventListener("click", function()

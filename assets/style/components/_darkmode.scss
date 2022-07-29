@@ -1,93 +1,53 @@
 
-/* @media (prefers-color-scheme: light) {
-    body {
-        background-color: $colorlight;
-        color: rgb(0, 0, 0);
-      };
+.nav__mode {
+    width: 100%;
+    height: 40px;
+    margin: 0 2rem;
+    position: relative;
 
-    };
-
-    
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: rgb(16, 14, 21);
-        color: $colorlight&;
-
-        footer {
-            background-color: $colorlight;
-            color: $colormain;
-
-        };
-      };
-
-    };
-    */
-
-    /*:root {
-        --font: #333;
-        --bg: #f1f1f1;
-    };*/
-
-
-
-
-/*-----------------------------button---------------------------*/
-    .nav__mode {
-        width: 100%;
-        height: 40px;
-        margin: 0 2rem;
-        position: relative;
-
-        &__toggle{
-            // -webkit-appearance: none;
-            // appearance: none;
-            height: 32px;
-            width: 65px;
-            background-color: $colormain;
-            position: absolute;
-            right: 0;
-            border-radius: 20px;
-            outline: none;
-            cursor: pointer;
-
-            &::after {
-                content: "";
-                position: absolute;
-                height: 24px;
-                width: 24px;
-                background-color: $colorlight;
-                top: 4px;
-                left: 7px;
-                border-radius: 50%;
-            };
-        };
-
-    }
-
-
-    /*-----------------------------dark theme---------------------------*/
-    .dark-theme {
-        background-color: #15181f;
-        color: #e5e5e5;
-    };
-    .dark-theme .nav__mode__toggle{
-        background-color: #f1f1f1;
+    &__toggle {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 32px;
+        width: 65px;
+        background-color: $colormain;
+        position: absolute;
+        right: 0;
+        border-radius: 20px;
+        outline: none;
+        cursor: pointer;
 
         &::after {
-            background-color: transparent;
-            box-shadow: 10px 10px #15181f;
-            top: -4px;
-            left: 30px;
-
+            content: "";
+            position: absolute;
+            height: 24px;
+            width: 24px;
+            background-color: $colorlight;
+            top: 4px;
+            left: 7px;
+            border-radius: 50%;
         };
-
     };
-    
 
-    
-    /*.dark-theme .toggle:after{
+};
+
+.dark-theme {
+    background-color: #15181f;
+    color: #e5e5e5;
+    };
+
+.dark-theme .nav__mode__toggle {
+    background-color: #f1f1f1;
+
+    &::after {
         background-color: transparent;
         box-shadow: 10px 10px #15181f;
         top: -4px;
         left: 30px;
-    }*.
+
+        };
+
+    };
+
+
+

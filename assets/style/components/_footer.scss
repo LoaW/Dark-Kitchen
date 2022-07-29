@@ -1,4 +1,5 @@
 .footer {
+
     width: 100%;
     margin: 2rem auto 0 auto;
     position: relative;
@@ -11,6 +12,14 @@
     justify-content: space-evenly;
     padding: 30px 30px 0px 30px;
 
+    @include media-screen-mobile {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 30px 0 0 0;
+    };
+
+
     &__informations {
         display: flex;
         position: relative;
@@ -21,6 +30,12 @@
         height: fit-content;
         padding: 0 2rem 1rem 2rem;
         // border: 2px solid white;
+
+        @include media-screen-mobile {
+            margin: auto;
+            padding-bottom: 0;
+        };
+
     };
 
     &__logo {
@@ -35,7 +50,11 @@
         color: $colorlight;
         font-size: 1.6rem;
         margin: 0 0 0.8rem 0;
-        //border: 2px solid red;
+        // border: 2px solid red;
+
+        @include media-screen-mobile {
+            margin-bottom: 0;
+        };
     };
     &__links {
         list-style-type: none;
@@ -66,8 +85,11 @@
             filter: drop-shadow(0.1rem 0.1rem 0.2rem rgba(6, 4, 44, 0.304));
 
             &:hover {
-                filter: drop-shadow(0rem 0rem 0.06rem rgba(252, 208, 188, 0.909));;
-            }
+                filter: drop-shadow(0rem 0rem 0.06rem rgba(252, 208, 188, 0.909));
+                @include media-screen-mobile {
+                    filter: none;
+                };
+            };
 
         };
         
@@ -92,7 +114,14 @@
         width:auto;
         padding: 0px 20px 0px 20px;
         // border: 2px solid red;
+
+        @include media-screen-mobile {
+            flex-direction: column;
+            padding: 0;
+            align-items: left;
+        };
     };
+
     &__list {
         display: flex;
         flex-direction: column;
@@ -102,6 +131,10 @@
         margin: 20px;
         padding: 1rem;
         // border: 2px solid orange;
+
+        @include media-screen-mobile {
+            margin: 0 0 0 2rem;
+        };
 
         a:link {
             text-decoration: none ;
@@ -130,7 +163,7 @@
             };
             &:active {
                 color: $colorlinks;
-            }
+            };
 
             &--position {
                 background-image: url("/Dark-Kitchen/assets/img/icons/posotionunicolor.svg");
@@ -151,12 +184,12 @@
                 padding-left: 1.5rem;
                 
             };
+            
+            };
 
 
         };
 
-
-    };
+ };
     
 
-}

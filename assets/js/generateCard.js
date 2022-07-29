@@ -164,7 +164,6 @@ butSushi.addEventListener("click", () => {
     papa.removeChild(papa.lastChild);
   }
   createAllCards(Sushis);
-  
 });
 
 const butPlate = document.querySelector(".plate");

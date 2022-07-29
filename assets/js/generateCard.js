@@ -154,7 +154,7 @@ butMaki.addEventListener("click", () => {
   while (papa.firstChild) {
     papa.removeChild(papa.lastChild);
   }
-  createAllCards(Makis);
+  createAllCards(Makis); 
 });
 
 const butSushi = document.querySelector(".sushi");
@@ -164,6 +164,7 @@ butSushi.addEventListener("click", () => {
     papa.removeChild(papa.lastChild);
   }
   createAllCards(Sushis);
+  
 });
 
 const butPlate = document.querySelector(".plate");
@@ -208,3 +209,7 @@ const Plates = repas_data.filter(function (Plate) {
 const Others = repas_data.filter(function (other) {
   return other.sort === "Other";
 });
+
+//chop card
+
+

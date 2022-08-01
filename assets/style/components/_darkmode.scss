@@ -1,7 +1,7 @@
-
+// style du curseur darkmode
 .nav__mode {
-    width: 100%;
-    height: 40px;
+    width: 15%;
+    height: 35px;
     margin: 0 2rem;
     position: relative;
 
@@ -31,23 +31,117 @@
 
 };
 
-.dark-theme {
-    background-color: #15181f;
-    color: #e5e5e5;
-    };
+
+// .dark-theme {
+//     background-color: var(--darkmode-bg-color);
+//     color: var(--darkmode-txt-color);
+// };
+
+// modebutton when dark mode selected
+
 
 .dark-theme .nav__mode__toggle {
-    background-color: #f1f1f1;
+    background-color: $colorlight;
 
     &::after {
         background-color: transparent;
         box-shadow: 10px 10px #15181f;
-        top: -4px;
-        left: 30px;
+        top: -5px;
+        left: 27px;
 
         };
 
-    };
+};
 
+
+@media (prefers-color-scheme: dark) {
+    // .dark
+    //  { background:  #333;
+    //     color: white;
+    // };
+  };
+  
+//  @media (prefers-color-scheme: light) {
+
+//  };
+
+ 
+// :root {
+//     --background-color: #fff;
+//     --text-color: #121416d8;
+//     --link-color: #543fd7;
+// }
+
+html[data-theme=light] {
+    --background-color: #fff;
+    --text-color: #121416d8;
+    --link-color: #F69E7B;
+    --medium-color: #D4B5B0;
+    background-color: var(--background-color);
+};
+    
+html[data-theme=dark] {
+    --background-color: #1a1c26;
+    --text-color: #e5e5e5;
+    --link-color:#F69E7B;
+    --medium-color: #D4B5B0;
+    --bluepalet-color: #383E56;
+    background-color: var(--background-color);
+
+    body {
+        .nav__logo {
+            background-color: var(--medium-color);
+            border-radius: 50%;
+        };
+        .nav__list a {
+            color: var(--text-color);
+            
+        };
+
+        .header {
+
+            &__title {
+                color : var(--medium-color);
+            };
+            &__description {
+                color: var(--text-color);
+                font-weight: 200;
+            };
+        };
+
+        .main {
+            &__title {
+                color : var(--medium-color);
+            };
+
+            &__description {
+                color: var(--text-color);
+            };
+
+            &__collection {
+                .card {
+                    background-color: var(--bluepalet-color) ;
+                    box-Shadow : 0.1rem 0.16rem 0.3rem #767782b7;
+
+                        .areaImg img {
+                            background-color: var(--medium-color);
+                        };
+                    
+                        .infos {
+                            color: var(--text-color);
+
+                        };
+                        .cardFooter {
+                            color: var(--medium-color);
+
+                        };
+                };
+
+            };
+        };
+    };
+    
+
+};
 
 

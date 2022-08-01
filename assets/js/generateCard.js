@@ -1,11 +1,35 @@
 
 
-/*-------------------darkmode function--------------------*/
-document.querySelector(".nav__mode__toggle").addEventListener("click", function()
-{
-  document.querySelector('body').classList.toggle("dark-theme");
-});
+// -------------------darkmode function--------------------
 
+let toggle = document.querySelector(".nav__mode__toggle");
+
+var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+if (storedTheme)
+    document.documentElement.setAttribute('data-theme', storedTheme)
+
+toggle.onclick = function() {
+  var currentTheme = document.documentElement.getAttribute("data-theme");
+  var targetTheme = "light";
+
+
+  if (currentTheme === "light") {
+    targetTheme = "dark";
+  };
+
+document.documentElement.setAttribute('data-theme', targetTheme)
+localStorage.setItem('theme', targetTheme);
+
+document.querySelector('.nav__mode').classList.toggle("dark-theme");
+
+};
+
+
+// document.querySelector(".nav__mode__toggle").addEventListener("click", function()
+// {
+//   document.querySelector('body').classList.toggle("dark-theme");
+// });
 
 // Data
 const repas_data = [

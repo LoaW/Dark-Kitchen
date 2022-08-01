@@ -4,4 +4,4 @@ $width-mobile : 480px;
     @media screen and (max-width : ($width-mobile)){
         @content;
     }
-}
+};
